@@ -1,4 +1,3 @@
-import React from 'react';
 import Nav from '../components/Nav';
 import Home from '../pages/Home';
 import ListedBooks from '../pages/ListedBooks';

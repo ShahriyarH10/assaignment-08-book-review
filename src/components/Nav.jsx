@@ -4,7 +4,7 @@ const Nav = () => {
 
 
     return (
-        <div>
+        <div className="container mx-auto">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -31,8 +31,8 @@ const Nav = () => {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-5">
-                    <a className="btn bg-green-500">Sign up</a>
-                    <a className="btn bg-green-500">Sign up</a>
+                    <a className="btn bg-green-500">Sign in</a>
+                    <a className="btn bg-sky-500">Sign up</a>
                 </div>
             </div>
         </div>
