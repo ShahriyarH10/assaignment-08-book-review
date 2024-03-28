@@ -5,20 +5,29 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home'
 import ListedBooks from './pages/ListedBooks'
 import PagesToRead from './pages/PagesToRead'
+import MainLayout from './layouts/MainLayout'
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element: <Home></Home>,
+    path: '/',
+    element: <MainLayout></MainLayout>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/listed-books',
+        element: <ListedBooks></ListedBooks>,
+
+      },
+      {
+        path: '/pages-to-read',
+        element: <PagesToRead></PagesToRead>,
+      },
+    ]
   },
-  {
-    path:'/listed-books',
-    element: <ListedBooks></ListedBooks>,
-  },
-  {
-    path:'/pages-to-read',
-    element: <PagesToRead></PagesToRead>,
-  }
+
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
